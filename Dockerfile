@@ -1,7 +1,6 @@
 FROM openjdk:17
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y git
+RUN apk update && apk upgrade && \
+    apk add --no-cache bash git openssh
 RUN mkdir /app
 VOLUME /app
 RUN git clone https://github.com/orawiss/FlywaySchemaBigquery.git 
