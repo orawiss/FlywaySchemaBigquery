@@ -7,3 +7,4 @@ ENTRYPOINT ["java","-cp","/FlywaySchemaBigquery/target/classes/*:/FlywaySchemaBi
 RUN echo $(pwd)
 RUN echo $(ls -rtl /FlywaySchemaBigquery/target/classes/)
 RUN echo $(ls -rtl /FlywaySchemaBigquery/lib/)
+RUN echo $(which java)
