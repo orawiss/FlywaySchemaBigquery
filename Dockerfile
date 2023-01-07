@@ -1,6 +1,6 @@
 FROM openjdk:17
-RUN apk update && apk upgrade && \
-    apk add --no-cache bash git openssh
+FROM ubuntu:20.04
+RUN apt-get install -y git
 RUN mkdir /app
 VOLUME /app
 RUN git clone https://github.com/orawiss/FlywaySchemaBigquery.git 
