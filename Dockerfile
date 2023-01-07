@@ -1,7 +1,7 @@
 FROM openjdk:17
-FROM ubuntu:20.04
-RUN  add-apt-repository ppa:git-core/ppa
-RUN  apt install -y git
+FROM ubuntu:latest
+RUN apt-get -y update
+RUN apt-get -y install git
 RUN mkdir /app
 VOLUME /app
 RUN git clone https://github.com/orawiss/FlywaySchemaBigquery.git 
