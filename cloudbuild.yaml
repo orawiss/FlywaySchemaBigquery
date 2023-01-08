@@ -4,11 +4,10 @@ steps:
     args: ['clean', 'install', '-DskipTests']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/flywaycchemabigquery', '.']
-    secretEnv: ['DBT_SA']
-    - id: 'flyway-run'
-      entrypoint: 'sh'
-      secretEnv: ['DBT_SA']
-      args: ['/FlywaySchemaBigquery/flyway.sh']
+  - id: 'flyway-run'
+     entrypoint: 'sh'
+     secretEnv: ['DBT_SA']
+     args: ['/FlywaySchemaBigquery/flyway.sh']
 
 images: ['gcr.io/$PROJECT_ID/flywaycchemabigquery']
 
