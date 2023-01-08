@@ -1,38 +1,3 @@
 Manifest-Version: 1.0
 Main-Class: com.flywaybigquery.App
-Class-Path: jackson-databind-2.14.0.jar grpc-core-1.50.2.jar netty-commo
- n-4.1.82.Final.jar proto-google-cloud-bigquerystorage-v1beta2-0.148.2.j
- ar listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar annot
- ations-4.1.1.4.jar flyway-core-9.11.0.jar arrow-memory-netty-10.0.0.jar
-  netty-buffer-4.1.82.Final.jar grpc-google-cloud-bigquerystorage-v1beta
- 2-0.148.2.jar flatbuffers-java-1.12.0.jar google-http-client-apache-v2-
- 1.42.3.jar grpc-netty-shaded-1.50.2.jar gax-httpjson-0.104.5.jar grpc-c
- ontext-1.50.2.jar arrow-vector-10.0.0.jar arrow-format-10.0.0.jar arrow
- -memory-core-10.0.0.jar proto-google-common-protos-2.10.0.jar checker-c
- ompat-qual-2.5.5.jar jsr305-3.0.2.jar error_prone_annotations-2.16.jar 
- grpc-googleapis-1.50.2.jar google-cloud-bigquery-2.19.1.jar protobuf-ja
- va-3.21.9.jar auto-value-annotations-1.10.1.jar google-http-client-1.42
- .3.jar gson-2.10.jar jackson-annotations-2.14.0.jar protobuf-java-util-
- 3.21.9.jar google-api-services-bigquery-v2-rev20221028-2.0.0.jar google
- -http-client-gson-1.42.3.jar google-oauth-client-1.34.1.jar flyway-gcp-
- bigquery-9.11.0.jar google-http-client-jackson2-1.42.3.jar httpclient-4
- .5.13.jar jackson-dataformat-toml-2.14.0.jar commons-codec-1.15.jar pro
- to-google-cloud-bigquerystorage-v1-2.24.2.jar opencensus-api-0.31.1.jar
-  google-cloud-bigquerystorage-2.24.2.jar GoogleBigQueryJDBC42-1.0.jar g
- rpc-protobuf-lite-1.50.2.jar slf4j-api-1.7.25.jar guava-31.0.1-android.
- jar conscrypt-openjdk-uber-2.5.2.jar auto-value-1.10.jar jackson-dataty
- pe-jsr310-2.14.0.jar api-common-2.2.2.jar threeten-extra-1.7.1.jar jack
- son-core-2.14.0.jar grpc-alts-1.50.2.jar google-http-client-appengine-1
- .42.3.jar commons-logging-1.2.jar grpc-google-cloud-bigquerystorage-v1b
- eta1-0.148.2.jar grpc-auth-1.50.2.jar grpc-protobuf-1.50.2.jar proto-go
- ogle-cloud-bigquerystorage-v1beta1-0.148.2.jar j2objc-annotations-1.3.j
- ar threetenbp-1.6.4.jar gax-grpc-2.19.5.jar perfmark-api-0.25.0.jar pro
- to-google-iam-v1-1.6.7.jar animal-sniffer-annotations-1.22.jar opencens
- us-contrib-http-util-0.31.1.jar google-auth-library-oauth2-http-1.14.0.
- jar javax.annotation-api-1.3.2.jar checker-qual-3.27.0.jar failureacces
- s-1.0.1.jar gax-2.19.5.jar grpc-google-cloud-bigquerystorage-v1-2.24.2.
- jar google-api-client-2.1.1.jar google-cloud-core-2.8.27.jar grpc-api-1
- .50.2.jar httpcore-4.4.15.jar google-cloud-core-http-2.8.27.jar grpc-st
- ub-1.50.2.jar json-20200518.jar grpc-grpclb-1.50.2.jar google-auth-libr
- ary-credentials-1.14.0.jar
 
