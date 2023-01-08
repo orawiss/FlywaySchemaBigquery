@@ -5,14 +5,14 @@ steps:
     
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE_NAME}', '.']
-
+  
 - id: 'dbt-run'
   name: '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE_NAME}:latest'
   entrypoint: 'sh'
   secretEnv: ['DBT_SA']
   env: ['PROJECT_ID=$PROJECT_ID', 'LOCATION=$_LOCATION', 'BUCKET_NAME=$PROJECT_ID-dbt']
   args: ['/FlywaySchemaBigquery/flyway.sh']
-
+  
 images:
   - '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE_NAME}'
 
