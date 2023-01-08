@@ -5,4 +5,4 @@ export KEYFILE=/tmp/credentials.json
 export CLASSPATH=/FlywaySchemaBigquery/lib/GoogleBigQueryJDBC/GoogleBigQueryJDBC42/1.0/GoogleBigQueryJDBC42-1.0.jar
 mkdir -p /FlywaySchemaBigquery/target/db/migration/
 cp -R /FlywaySchemaBigquery/src/main/resources/db/migration/ /FlywaySchemaBigquery/target/db/migration/
-java -jar /FlywaySchemaBigquery/target/FlywaySchemaBigquery-1.0-SNAPSHOT-jar-with-dependencies.jar
+java -jar /FlywaySchemaBigquery/target/FlywaySchemaBigquery-1.0-SNAPSHOT-jar-with-dependencies.jar "filesystem:/FlywaySchemaBigquery/src/main/resources/db/migration/"
