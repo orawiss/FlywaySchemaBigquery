@@ -8,4 +8,3 @@ RUN git clone https://github.com/orawiss/FlywaySchemaBigquery.git
 RUN export CLASSPATH=/FlywaySchemaBigquery/lib/GoogleBigQueryJDBC/GoogleBigQueryJDBC42/1.0/GoogleBigQueryJDBC42-1.0.jar
 RUN echo $(which java)
 RUN ["chmod", "+x", "/FlywaySchemaBigquery/flyway.sh"]
-RUN /FlywaySchemaBigquery/flyway.sh
