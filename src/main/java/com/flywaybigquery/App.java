@@ -7,6 +7,8 @@ import com.google.api.client.googleapis.auth.oauth2.GoogleTokenResponse;
 
 public class App {
     public static void main(String[] args) {
+
+        String flywayLocation = args[0];
         DataSource dataSource = new DataSource();
         dataSource.setURL("jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;ProjectId=data-product-analytic-ecommrce;OAuthType=3");
 
@@ -16,6 +18,7 @@ public class App {
                 .schemas("data-product-analytic-ecommrce.flyway")
                 .dataSource(dataSource)
                 .baselineOnMigrate(true)
+                .locations(flywayLocation)
                 .load();
 
         flyway.migrate();
