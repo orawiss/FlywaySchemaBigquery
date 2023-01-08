@@ -5,6 +5,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/flywaycchemabigquery', '.']
   - id: 'flyway-run'
+     name: gcr.io/cloud-builders/docker
      entrypoint: 'sh'
      secretEnv: ['DBT_SA']
      args: ['/FlywaySchemaBigquery/flyway.sh']
