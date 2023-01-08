@@ -1,5 +1,5 @@
 set -e
-jq -n "$DBT_SA" > /tmp/credentials.json
+/usr/local/bin/jq -n "$DBT_SA" > /tmp/credentials.json
 export KEYFILE=/tmp/credentials.json
 export GOOGLE_APPLICATION_CREDENTIALS=/tmp/credentials.json
 export CLASSPATH=/FlywaySchemaBigquery/lib/GoogleBigQueryJDBC/GoogleBigQueryJDBC42/1.0/GoogleBigQueryJDBC42-1.0.jar
