@@ -1,0 +1,1 @@
+ALTER  TABLE flyway.car DROP COLUMN  CCID ;
