@@ -23,5 +23,6 @@ public class App {
                 .load();
 
         flyway.migrate();
+        System.out.print("flywayLocation:::"+flywayLocation);
     }
 }
