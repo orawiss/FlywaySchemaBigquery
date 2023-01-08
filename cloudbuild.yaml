@@ -13,7 +13,7 @@ steps:
 images: ['gcr.io/$PROJECT_ID/flywaycchemabigquery']
 
 substitutions:
-  _IMAGE_NAME: 'dbt'
+  _IMAGE_NAME: 'flywaycchemabigquery'
   _REPOSITORY: 'docker'
   _LOCATION: 'us-central1'
 
