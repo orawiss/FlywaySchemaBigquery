@@ -8,10 +8,14 @@ import com.google.api.client.googleapis.auth.oauth2.GoogleTokenResponse;
 public class App {
     public static void main(String[] args) {
 
-
-        String flywayLocation = "filesystem:/FlywaySchemaBigquery/flyway/db/migration";
-
-        System.out.print("flywayLocation:::"+flywayLocation);
+        String flywayLocation = null;
+        if (args.length > 0) {
+            flywayLocation = args[0];
+        }
+        if (flywayLocation == null) {
+            flywayLocation = "filesystem:/FlywaySchemaBigquery/flyway/db/migration";
+        }
+        System.out.println("flywayLocation:::"+flywayLocation+"\n");
         DataSource dataSource = new DataSource();
         dataSource.setURL("jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;ProjectId=data-product-analytic-ecommrce;OAuthType=3");
 
