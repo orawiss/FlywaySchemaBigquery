@@ -4,7 +4,7 @@ steps:
     entrypoint: 'sh'
     secretEnv: ['FLYWAY_SA']
     env: ['PROJECT_ID=$PROJECT_ID', 'LOCATION=$_LOCATION', 'BUCKET_NAME=$PROJECT_ID-flyway']
-    args: ['/FlywaySchemaBigquery/flyway.sh']
+    args: ['/flyway.sh']
 
 substitutions:
   _IMAGE_NAME: 'flywayschema'
