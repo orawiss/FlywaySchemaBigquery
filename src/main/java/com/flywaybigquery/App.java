@@ -16,7 +16,7 @@ public class App {
                 .defaultSchema("data-product-analytic-ecommrce.flyway")
                 .schemas("data-product-analytic-ecommrce.flyway")
                 .dataSource(dataSource)
-                .baselineOnMigrate(true)
+             //   .baselineOnMigrate(true)
                // .locations(flywayLocation)
                 .load();
 
