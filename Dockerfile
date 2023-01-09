@@ -4,9 +4,8 @@ RUN apt-get update \
     && pip3 install sqlfluff==1.2.1 \
 
 
-ARG FLYWAY_ARTIFACT_URL=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/
 
-RUN curl -L ${FLYWAY_ARTIFACT_URL}/9.9.0/flyway-commandline-9.9.0.tar.gz -o flyway-commandline-9.9.0.tar.gz \
+RUN curl -L https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/9.9.0/flyway-commandline-9.9.0.tar.gz -o flyway-commandline-9.9.0.tar.gz \
   && gzip -d flyway-commandline-9.9.0.tar.gz \
   && tar -xf flyway-commandline-9.9.0.tar --strip-components=1 \
   && rm flyway-commandline-9.9.0.tar \
@@ -14,7 +13,6 @@ RUN curl -L ${FLYWAY_ARTIFACT_URL}/9.9.0/flyway-commandline-9.9.0.tar.gz -o flyw
   && chmod a+x /flyway/flyway \
 ENV PATH="/flyway:${PATH}"
 
-FROM flyway as redgate
 
 RUN wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && \
     mv jq-linux64 /usr/local/bin/jq && \
