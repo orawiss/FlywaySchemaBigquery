@@ -9,9 +9,7 @@ public class App {
     public static void main(String[] args) {
 
 
-        String flywayLocation = args[0];
-        if(args[0] == null || args[0].length() == 0)
-            flywayLocation = "filesystem:/FlywaySchemaBigquery/flyway/db/migration";
+        String flywayLocation = "filesystem:/FlywaySchemaBigquery/flyway/db/migration";
 
         System.out.print("flywayLocation:::"+flywayLocation);
         DataSource dataSource = new DataSource();
