@@ -19,8 +19,8 @@ ENV PATH="/flyway:${PATH}"
 RUN wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && \
     mv jq-linux64 /usr/local/bin/jq && \
     chmod +x /usr/local/bin/jq
-COPY /flyway/target/FlywaySchemaBigquery-1.0-SNAPSHOT-jar-with-dependencies.jar /flyway/flyway.jar
-COPY /flyway/src/main/resources/db/migration /flyway/db/migration
-COPY /flyway/flyway.conf /flyway/db/migration/flyway.conf
+COPY ./target/FlywaySchemaBigquery-1.0-SNAPSHOT-jar-with-dependencies.jar /flyway/flyway.jar
+COPY ./src/main/resources/db/migration /flyway/db/migration
+COPY ./flyway.conf /flyway/db/migration/flyway.conf
 RUN echo $(which java)
 RUN ["chmod", "+x", "/flyway/flyway.sh"]
