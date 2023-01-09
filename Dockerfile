@@ -3,7 +3,7 @@ RUN apt-get update \
     && apt-get install -y python3-pip \
     && pip3 install sqlfluff==1.2.1 \
 
-ARG FLYWAY_VERSION
+ARG FLYWAY_VERSION=9.9.0
 ARG FLYWAY_ARTIFACT_URL=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/
 
 RUN curl -L ${FLYWAY_ARTIFACT_URL}${FLYWAY_VERSION}/flyway-commandline-${FLYWAY_VERSION}.tar.gz -o flyway-commandline-${FLYWAY_VERSION}.tar.gz \
