@@ -14,7 +14,7 @@ public class App {
             flywayLocation = args[0];
         }
         if (flywayLocation == null) {
-            flywayLocation = "filesystem:/FlywaySchemaBigquery/flyway/db/migration/";
+            flywayLocation = "classpath:db/migration";
         }
         System.out.println("flywayLocation:::"+flywayLocation+"\n");
         DataSource dataSource = new DataSource();
