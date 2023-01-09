@@ -2,6 +2,7 @@ set -e
 /usr/local/bin/jq -n "$FLYWAY_SA" > /tmp/credentials.json
 echo "$FLYWAY_SA"
 export KEYFILE=/tmp/credentials.json
+chmod -R 777 /FlywaySchemaBigquery/flyway/db/migration/
 export CLASSPATH=/FlywaySchemaBigquery/lib/GoogleBigQueryJDBC/GoogleBigQueryJDBC42/1.0/GoogleBigQueryJDBC42-1.0.jar;/FlywaySchemaBigquery/flyway/db/migration/
 cp /FlywaySchemaBigquery/flyway.conf $HOME
 ls -rtl /FlywaySchemaBigquery/flyway/db/migration/
