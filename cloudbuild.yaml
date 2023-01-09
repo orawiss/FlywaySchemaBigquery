@@ -4,7 +4,6 @@ steps:
 
   - id: 'flyway-run'
     name: '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE_NAME}:latest'
-    entrypoint: 'sh'
     secretEnv: ['FLYWAY_SA']
     env: ['PROJECT_ID=$PROJECT_ID', 'LOCATION=$_LOCATION', 'BUCKET_NAME=$PROJECT_ID-flyway']
 
