@@ -5,7 +5,7 @@ RUN apt-get update \
 
 
 
-RUN wget https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/9.9.0/flyway-commandline-9.9.0.tar.gz  \
+RUN curl -L https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/9.9.0/flyway-commandline-9.9.0.tar.gz  -o flyway-commandline-${FLYWAY_VERSION}.tar.gz \
   && gzip -d flyway-commandline-9.9.0.tar.gz \
   && tar -xf flyway-commandline-9.9.0.tar --strip-components=1 \
   && rm flyway-commandline-9.9.0.tar \
