@@ -10,7 +10,9 @@ RUN curl https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/9.9.0/fl
   && tar -xf flyway-commandline-9.9.0.tar --strip-components=1 \
   && rm flyway-commandline-9.9.0.tar \
   && chmod -R a+r /flyway \
-  && chmod a+x /flyway/flyway \
+  && chmod a+x /flyway/flyway
+
+
 ENV PATH="/flyway:${PATH}"
 
 
