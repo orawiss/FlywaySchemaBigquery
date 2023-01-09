@@ -27,7 +27,7 @@ public class App {
                 .baselineOnMigrate(true)
                 .locations(flywayLocation)
                 .load();
-
+        System.out.println("flyway config:::"+flyway.getConfiguration().getLocations().toString());
         flyway.migrate();
         System.out.print("flywayLocation:::"+flywayLocation);
     }
