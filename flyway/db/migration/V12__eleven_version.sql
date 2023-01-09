@@ -1,0 +1,1 @@
+ALTER  TABLE flyway.car ADD COLUMN  CC12 STRING;
