@@ -4,6 +4,7 @@ RUN apk add git
 RUN wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && \
     mv jq-linux64 /usr/local/bin/jq && \
     chmod +x /usr/local/bin/jq
-RUN git clone https://github.com/orawiss/FlywaySchemaBigquery.git  
+COPY ./target/FlywaySchemaBigquery-1.0-SNAPSHOT-jar-with-dependencies.jar /flyway.jar
+COPY ./flyway.sh /flyway.sh
 RUN echo $(which java)
-RUN ["chmod", "+x", "/FlywaySchemaBigquery/flyway.sh"]
+RUN ["chmod", "+x", "/flyway.sh"]
