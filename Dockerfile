@@ -1,8 +1,8 @@
-FROM eclipse-temurin:17-jdk-alpine
-RUN apk update
-RUN apk add git
-RUN apk add python3-pip
-RUN pip3 install sqlfluff==1.2.1
+FROM eclipse-temurin:11-jre-focal as flyway
+RUN apt-get update \
+    && apt-get install -y python3-pip \
+    && pip3 install sqlfluff==1.2.1 \
+
 WORKDIR /flyway
 ARG FLYWAY_VERSION
 ARG FLYWAY_ARTIFACT_URL=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/
