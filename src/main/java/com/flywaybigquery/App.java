@@ -8,14 +8,6 @@ import org.flywaydb.core.api.Location;
 
 public class App {
     public static void main(String[] args) {
-
-        String flywayLocation = null;
-        if (args.length > 0) {
-            flywayLocation = args[0];
-        }
-        if (flywayLocation == null) {
-            flywayLocation = "classpath:db/migration";
-        }
         DataSource dataSource = new DataSource();
         dataSource.setURL("jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;ProjectId=data-product-analytic-ecommrce;OAuthType=3");
 
