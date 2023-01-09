@@ -16,7 +16,6 @@ public class App {
         if (flywayLocation == null) {
             flywayLocation = "classpath:db/migration";
         }
-        System.out.println("flywayLocation:::"+flywayLocation+"\n");
         DataSource dataSource = new DataSource();
         dataSource.setURL("jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;ProjectId=data-product-analytic-ecommrce;OAuthType=3");
 
@@ -26,17 +25,10 @@ public class App {
                 .schemas("data-product-analytic-ecommrce.flyway")
                 .dataSource(dataSource)
                 .baselineOnMigrate(true)
-                .locations(flywayLocation)
+               // .locations(flywayLocation)
                 .load();
 
-        Location[] locations = flyway.getConfiguration().getLocations();
-        String [] stringLocations = new String[locations.length];
-        for (int i = 0; i < locations.length; i++) {
-                stringLocations[i] = locations[i].getDescriptor();
-                System.out.println("flyway config****:::"+stringLocations[i]);
-            }
-
         flyway.migrate();
-        System.out.print("flywayLocation:::"+flywayLocation);
+
     }
 }
