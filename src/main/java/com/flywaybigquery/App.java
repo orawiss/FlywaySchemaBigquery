@@ -4,6 +4,7 @@ import org.flywaydb.core.Flyway;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.auth.oauth2.GoogleTokenResponse;
+import org.flywaydb.core.api.Location;
 
 public class App {
     public static void main(String[] args) {
@@ -27,7 +28,14 @@ public class App {
                 .baselineOnMigrate(true)
                 .locations(flywayLocation)
                 .load();
-        System.out.println("flyway config:::"+flyway.getConfiguration().getLocations().toString());
+
+        Location[] locations = flyway.getConfiguration().getLocations();
+        String [] stringLocations = new String[locations.length];
+        for (int i = 0; i < locations.length; i++) {
+                stringLocations[i] = locations[i].getDescriptor();
+                System.out.println("flyway config****:::"+stringLocations[i]);
+            }
+
         flyway.migrate();
         System.out.print("flywayLocation:::"+flywayLocation);
     }
