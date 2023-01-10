@@ -1,2 +1,6 @@
 # Project exclude paths
 /target/
+/maven2/
+/.idea/
+/out/
+/FlywaySchemaBigquery-1.0-SNAPSHOT-jar-with-dependencies.jar
