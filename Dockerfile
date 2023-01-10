@@ -21,7 +21,7 @@ ENV PATH $PATH:/usr/lib/jvm/java-17-openjdk/jre/bin:/usr/lib/jvm/java-17-openjdk
 
 RUN wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && \
     mv jq-linux64 /usr/local/bin/jq && \
-    chmod +x /usr/local/bin/jq \
+    chmod +x /usr/local/bin/jq
 
 RUN ls -rtl ./
 RUN echo $(which java)
