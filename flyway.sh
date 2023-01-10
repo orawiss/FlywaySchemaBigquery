@@ -7,7 +7,7 @@ cat /tmp/credentials.json
 export GOOGLE_APPLICATION_CREDENTIALS=/tmp/credentials.json
 #jar tvf /flyway.jar | grep migration
 #java -jar /flyway.jar
-cd /home/
+cd /home/target/classes/com/flywaybigquery/
 /usr/bin/mvn clean
 /usr/bin/mvn clean compile assembly:single
 ls -rtl /home/lib/GoogleBigQueryJDBC/GoogleBigQueryJDBC42/1.0/
