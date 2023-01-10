@@ -13,6 +13,7 @@ public class App {
         if (args.length > 0) {
             flywayLocation = args[0];
         }
+
         if (flywayLocation == null) {
             flywayLocation = "/home/wissemk/IdeaProjects/FlywaySchemaBigquery/flyway/db/migration/";
         }
