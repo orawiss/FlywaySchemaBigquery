@@ -26,5 +26,10 @@
       <option name="name" value="In Project Repo" />
       <option name="url" value="file://$PROJECT_DIR$/lib" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="flywaybigquery" />
+      <option name="name" value="In Project Repo" />
+      <option name="url" value="file://$PROJECT_DIR$/lib" />
+    </remote-repository>
   </component>
 </project>
