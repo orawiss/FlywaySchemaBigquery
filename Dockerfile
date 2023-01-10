@@ -23,8 +23,11 @@ RUN wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && \
     mv jq-linux64 /usr/local/bin/jq && \
     chmod +x /usr/local/bin/jq
 
-RUN ls -rtl /home/
-RUN ls -rtl /root/
+COPY ./target/FlywaySchemaBigquery-1.0-SNAPSHOT-jar-with-dependencies.jar /flyway.jar
+COPY ./* /*
+
+RUN ls -rtl /
+
 RUN echo $(which java)
-RUN ["chmod", "+x", "./flyway.sh"]
-ENTRYPOINT ["./flyway.sh"]
+RUN ["chmod", "+x", "/flyway.sh"]
+ENTRYPOINT ["/flyway.sh"]
